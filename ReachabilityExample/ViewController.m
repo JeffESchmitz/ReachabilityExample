@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Reachability.h"
 
 @interface ViewController ()
 
@@ -17,11 +18,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    if (self) {
+        // Add Observer
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityDidChange:) name:kReachabilityChangedNotification object:nil];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)reachabilityDidChange:(NSNotification *)notification {
+    Reachability *reachability = (Reachability *)[notification object];    
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    
+    switch (networkStatus) {
+        case NotReachable:
+            NSLog(@"Reachability: No WiFi network connection");
+            break;
+        
+        case ReachableViaWiFi:
+            NSLog(@"Reachability: Has WiFi network connection");
+            break;
+
+        case ReachableViaWWAN:
+            NSLog(@"Reachability: Has WWAN network connection");
+            break;
+
+        default:
+            NSLog(@"Warning! reachability default case executed");
+            break;
+    }
 }
+
 
 @end

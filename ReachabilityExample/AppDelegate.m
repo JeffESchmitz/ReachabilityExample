@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    Reachability *reachability = [Reachability reachabilityWithHostName:@"www.google.com"];
+    // start monitoring
+    [reachability startNotifier];
+    
     return YES;
 }
 

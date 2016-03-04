@@ -14,6 +14,7 @@
 		95CED3191C89E97B007F47A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CED3181C89E97B007F47A2 /* Assets.xcassets */; };
 		95CED31C1C89E97B007F47A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CED31A1C89E97B007F47A2 /* LaunchScreen.storyboard */; };
 		95CED3271C89E97B007F47A2 /* ReachabilityExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CED3261C89E97B007F47A2 /* ReachabilityExampleTests.m */; };
+		95FD8A601C89F31A00ECF12E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FD8A5F1C89F31A00ECF12E /* SystemConfiguration.framework */; };
 		96D0AFB3EA3DE52C61E61501 /* libPods-ReachabilityExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4419B543B31CD271ABFFCB52 /* libPods-ReachabilityExample.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		95CED3221C89E97B007F47A2 /* ReachabilityExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReachabilityExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CED3261C89E97B007F47A2 /* ReachabilityExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReachabilityExampleTests.m; sourceTree = "<group>"; };
 		95CED3281C89E97B007F47A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95FD8A5F1C89F31A00ECF12E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DDD54E895B44B1B7D3F6C1D6 /* Pods-ReachabilityExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReachabilityExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReachabilityExample/Pods-ReachabilityExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FD8A601C89F31A00ECF12E /* SystemConfiguration.framework in Frameworks */,
 				96D0AFB3EA3DE52C61E61501 /* libPods-ReachabilityExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +71,7 @@
 		591BC36ED8B66E8B9AD62CB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95FD8A5F1C89F31A00ECF12E /* SystemConfiguration.framework */,
 				4419B543B31CD271ABFFCB52 /* libPods-ReachabilityExample.a */,
 			);
 			name = Frameworks;
