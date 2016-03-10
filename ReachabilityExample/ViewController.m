@@ -36,8 +36,6 @@
         
         case ReachableViaWiFi:
             NSLog(@"Reachability: Has WiFi network connection");
-            break;
-
         case ReachableViaWWAN:
             NSLog(@"Reachability: Has WWAN network connection");
             break;
